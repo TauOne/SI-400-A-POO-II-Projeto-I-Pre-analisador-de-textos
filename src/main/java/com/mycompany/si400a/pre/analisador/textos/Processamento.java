@@ -18,14 +18,18 @@ import java.util.TreeMap;
 public class Processamento {
 
     private String texto;
-    Map<String, String> map = new TreeMap();
+    TreeMap<String, String> map = new TreeMap();
 
     public String getTexto() {
         return texto;
     }
 
-    private void setTexto(String texto) {
+    public void setTexto(String texto) {
         this.texto = texto;
+    }
+
+    public Map<String, String> getMap() {
+        return map;
     }
 
     public void lerRemoverTitulo(String arquivo) {
@@ -63,28 +67,33 @@ public class Processamento {
         }
     }
 
+    public void removerPont() {
+        if (this.texto.contains("  ") || this.texto.contains("   ")) {
+            setTexto(this.texto.replace("  ", ""));
+            setTexto(this.texto.replace("   ", ""));
+        }
+    }
+
     public void lowerCase() {
         setTexto(this.texto.toLowerCase());
     }
 
-    public void mapeando() {
+    public void mapear() {
         String[] aux = this.texto.split(" ");
         int cont = 0;
+
+        //cria um mapeamento somente com as chaves
         for (String key : aux) {
-            map.put(key, "");
+            this.map.put(key, "");
         }
-        while (cont < aux.length - 1) { //garante que não vai extrapolar o tamanho do vetor
-            //verifica se o valor não está em branco
-            //if (!map.get(aux[cont]).equals("")) {
-                //verifica se o valor já não existe naquele mapa
-                if (!map.get(aux[cont]).contains(aux[cont + 1])) {
-                    map.put(aux[cont], map.get(aux[cont]) + ", " + aux[cont + 1]);
-                }
-           // } else {
-           //     map.put(aux[cont], map.get(aux[cont]) + aux[cont + 1]);
-           // }
+
+        //garante que não vai extrapolar o tamanho do vetor
+        while (cont < aux.length - 1) {
+            //verifica se o valor já não existe naquele mapa
+            if (!map.get(aux[cont]).contains(aux[cont + 1])) {
+                this.map.put(aux[cont], this.map.get(aux[cont]) + ", " + aux[cont + 1]);
+            }
             cont++;
         }
     }
-
 }
