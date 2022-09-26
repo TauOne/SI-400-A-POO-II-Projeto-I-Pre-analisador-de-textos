@@ -5,6 +5,9 @@
 
 package com.mycompany.si400a.pre.analisador.textos;
 
+//import java.util.Map;
+//import java.util.TreeMap;
+
 /**
  *
  * @author saina
@@ -12,6 +15,7 @@ package com.mycompany.si400a.pre.analisador.textos;
 public class main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Controller inicio = new Controller();
+        inicio.go(args);
     }
 }
