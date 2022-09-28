@@ -12,8 +12,8 @@
             <properties>
                 <exec.vmArgs></exec.vmArgs>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
-                <exec.appArgs>Texto01.txt Texto02.txt</exec.appArgs>
-                <exec.mainClass>com.mycompany.si400a.pre.analisador.textos.Main</exec.mainClass>
+                <exec.appArgs></exec.appArgs>
+                <exec.mainClass>com.mycompany.si400a.pre.analisador.textos.main</exec.mainClass>
                 <exec.executable>java</exec.executable>
                 <exec.workingdir>C:\Users\saina\Documents\NetBeansProjects\SI400A-Pre-Analisador-Textos</exec.workingdir>
             </properties>
@@ -30,8 +30,8 @@
             <properties>
                 <exec.vmArgs>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</exec.vmArgs>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
-                <exec.appArgs>Texto01.txt Texto02.txt</exec.appArgs>
-                <exec.mainClass>com.mycompany.si400a.pre.analisador.textos.Main</exec.mainClass>
+                <exec.appArgs></exec.appArgs>
+                <exec.mainClass>com.mycompany.si400a.pre.analisador.textos.main</exec.mainClass>
                 <exec.executable>java</exec.executable>
                 <jpda.listen>true</jpda.listen>
                 <exec.workingdir>C:\Users\saina\Documents\NetBeansProjects\SI400A-Pre-Analisador-Textos</exec.workingdir>
@@ -49,10 +49,10 @@
             <properties>
                 <exec.vmArgs></exec.vmArgs>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
-                <exec.mainClass>com.mycompany.si400a.pre.analisador.textos.Main</exec.mainClass>
+                <exec.mainClass>com.mycompany.si400a.pre.analisador.textos.main</exec.mainClass>
                 <exec.executable>java</exec.executable>
                 <exec.workingdir>C:\Users\saina\Documents\NetBeansProjects\SI400A-Pre-Analisador-Textos</exec.workingdir>
-                <exec.appArgs>Texto01.txt Texto02.txt</exec.appArgs>
+                <exec.appArgs></exec.appArgs>
             </properties>
         </action>
     </actions>

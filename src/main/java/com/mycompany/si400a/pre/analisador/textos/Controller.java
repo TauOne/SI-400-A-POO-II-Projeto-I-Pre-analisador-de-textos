@@ -4,13 +4,18 @@
  */
 package com.mycompany.si400a.pre.analisador.textos;
 
+import java.util.Scanner;
+
 /**
  *
  * @author saina
  */
 public class Controller {
 
-    public void go(String[] args) {
+    public void go() {
+        Scanner scan = new Scanner(System.in);
+        String line = scan.nextLine();
+        String[] args = line.split(" ");
         for (String txt : args) {
             Processamento instancia = new Processamento();
             instancia.lerRemoverTitulo(txt);
