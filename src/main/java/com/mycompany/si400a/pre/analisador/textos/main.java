@@ -10,7 +10,7 @@ package com.mycompany.si400a.pre.analisador.textos;
 
 /**
  *
- * @author
+ * @author Wara Inti Pardo 218904
  */
 public class main {
 
