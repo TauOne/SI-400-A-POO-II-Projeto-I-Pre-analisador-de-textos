@@ -5,7 +5,6 @@
 package com.mycompany.si400a.pre.analisador.textos;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -13,26 +12,57 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
- *
- * @author saina
+ * Classe para trabalhar em cima <br>
+ * do texto e mapea-lo.
+ * @author 
  */
 public class Processamento {
-
     private String texto;
-    TreeMap<String, String> map = new TreeMap();
-
+    private TreeMap<String, String> map = new TreeMap();
+    /**
+     * Método acessor publico do atributo texto.<br>
+     * <b>Uso:</b>
+     * Objeto.getTexto();<br>
+     * @return um objeto do tipo String <br>
+     * contendo o valor do atributo texto.
+     * @author 
+     */
     public String getTexto() {
         return texto;
     }
-
+    /**
+     * Método modificador público do atributo texto.<br>
+     * <b>Uso:</b>
+     * Objeto.setTexto(String texto);<br>
+     * @param texto é um Objeto do tipo String<br>
+     * que sobrescreve o conteúdo do atributo texto.
+     * @author
+     */
     public void setTexto(String texto) {
         this.texto = texto;
     }
-
+     /**
+     * Método acessor publico do atributo map.<br>
+     * <b>uso:</b>
+     * Objeto.getMap();<br>
+     * @return um objeto do tipo TreeMap<br>
+     * contendo o valor do atributo map.
+     * @author 
+     */
     public Map<String, String> getMap() {
         return map;
     }
-
+    /**
+     * Método para fazer a leitura e remoção do título do texto<br>
+     * Caso não encontre o Arquivo ou não consiga lê-lo armazena<br>
+     * um conteúdo de Erro ao atributo texto do Objeto e mostrá-lo<br>
+     * no terminal.<br>
+     * <b>Uso:</b>
+     * ObjetoProcessamento.lerRemoverTitulo(String arquivo);
+     * @param arquivo deve ser um Objeto do tipo String<br>
+     * contendo o nome do arquivo a ser lido.
+     * @author Tauan Rodrigues 247599
+     */
     public void lerRemoverTitulo(String arquivo) {
         try {
             FileReader arq = new FileReader(arquivo);
@@ -53,32 +83,61 @@ public class Processamento {
                 arq.close();
             } catch (IOException ex) {
                 setTexto("Erro:não foi possível ler o arquivo!");
+                System.out.println(getTexto());
             }
         } catch (FileNotFoundException ex) {
             setTexto("Erro: Arquivo não encontrado!");
-        }
-        if (arquivo.contains("Erro")) {
-            setTexto("");
+            System.out.println(getTexto());
         }
     }
-
+    /**
+     * Método para fazer a remoção de uma pontuação (substring) do texto.<br>
+     * <b>Uso:</b>
+     * ObjetoProcessamento.removerPont(String splitter);
+     * @param splitter deve ser um Objeto do tipo String<br> 
+     * contendo a pontuação a ser removido do texto.<br>
+     * @author 
+     */
     public void removerPont(String splitter) {
         if (this.texto.contains(splitter)) {
             setTexto(this.texto.replace(splitter, ""));
         }
     }
-
+    /**
+     * Método para fazer a remoção de espaços em branco do texto<br>
+     * Ao remover a pontuação podem ser gerados espaços em branco consecutivos<br>
+     * <b>Uso:</b>
+     * ObjetoProcessamento.removerPont();
+     * Use sempre esse método após todos os outros removerPont(String splitter).
+     * @author 
+     */
     public void removerPont() {
-        if (this.texto.contains("  ") || this.texto.contains("   ")) {
+        if (getTexto().contains("  ") || getTexto().contains("   ")) {
             setTexto(this.texto.replace("  ", ""));
             setTexto(this.texto.replace("   ", ""));
         }
     }
-
+    /**
+     * Método para converter todos os caracteres<br>
+     * do texto em letras minúsculas<br>
+     * <b>Uso:</b>
+     * ObjetoProcessamento.lowerCase();
+     * @author
+     */
     public void lowerCase() {
         setTexto(this.texto.toLowerCase());
     }
-
+    /**
+     * Método para mapear o atributo texto usando uma TreeMap<br>
+     * que recebe todas as palavras do texto uma única vez<br>
+     * como chave e atribui a elas um valor vazio, para<br>
+     * posteriormente concatenar as palavras seguintes a <br>
+     * essa chave ao valor das mesmas e armazenar no Atributo<br>
+     * map desse objeto<br>
+     * <b>Uso:</b>
+     * ObjetoProcessamento.mapear();
+     * @author
+     */
     public void mapear() {
         String[] aux = this.texto.split(" ");
         int cont = 0;

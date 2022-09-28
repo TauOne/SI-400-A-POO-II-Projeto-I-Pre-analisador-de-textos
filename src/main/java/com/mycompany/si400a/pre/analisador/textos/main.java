@@ -10,7 +10,7 @@ package com.mycompany.si400a.pre.analisador.textos;
 
 /**
  *
- * @author saina
+ * @author
  */
 public class main {
 
