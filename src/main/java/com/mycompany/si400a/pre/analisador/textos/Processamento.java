@@ -25,7 +25,7 @@ public class Processamento {
      * Objeto.getTexto();<br>
      * @return um objeto do tipo String <br>
      * contendo o valor do atributo texto.
-     * @author 
+     * @author Matheus Roberto Mariano 246029
      */
     public String getTexto() {
         return texto;
@@ -36,7 +36,7 @@ public class Processamento {
      * Objeto.setTexto(String texto);<br>
      * @param texto é um Objeto do tipo String<br>
      * que sobrescreve o conteúdo do atributo texto.
-     * @author
+     * @author Matheus Roberto Mariano 246029
      */
     public void setTexto(String texto) {
         this.texto = texto;
@@ -47,7 +47,7 @@ public class Processamento {
      * Objeto.getMap();<br>
      * @return um objeto do tipo TreeMap<br>
      * contendo o valor do atributo map.
-     * @author 
+     * @author Matheus Roberto Mariano 246029
      */
     public Map<String, String> getMap() {
         return map;
@@ -84,19 +84,21 @@ public class Processamento {
             } catch (IOException ex) {
                 setTexto("Erro:não foi possível ler o arquivo!");
                 System.out.println(getTexto());
+                System.exit(0);
             }
         } catch (FileNotFoundException ex) {
             setTexto("Erro: Arquivo não encontrado!");
             System.out.println(getTexto());
+            System.exit(0);
         }
     }
     /**
-     * Método para fazer a remoção de uma pontuação (substring) do texto.<br>
-     * <b>Uso:</b>
-     * ObjetoProcessamento.removerPont(String splitter);
-     * @param splitter deve ser um Objeto do tipo String<br> 
-     * contendo a pontuação a ser removido do texto.<br>
-     * @author 
+     * Método para fazer a remoção de uma pontuação (substring) do texto. <br>
+     * <b>Uso:</b> <br>
+     * ObjetoProcessamento.removerPont(String splitter); <br>
+     * @param splitter deve ser um Objeto do tipo String <br> 
+     * contendo a pontuação a ser removido do texto. <br>
+     * @author Matheus Roberto Mariano 246029
      */
     public void removerPont(String splitter) {
         if (this.texto.contains(splitter)) {
@@ -109,7 +111,7 @@ public class Processamento {
      * <b>Uso:</b>
      * ObjetoProcessamento.removerPont();
      * Use sempre esse método após todos os outros removerPont(String splitter).
-     * @author 
+     * @author Matheus Roberto Mariano 246029
      */
     public void removerPont() {
         if (getTexto().contains("  ") || getTexto().contains("   ")) {
@@ -122,7 +124,7 @@ public class Processamento {
      * do texto em letras minúsculas<br>
      * <b>Uso:</b>
      * ObjetoProcessamento.lowerCase();
-     * @author
+     * @author Matheus Roberto Mariano 246029
      */
     public void lowerCase() {
         setTexto(this.texto.toLowerCase());

@@ -15,7 +15,11 @@ package com.mycompany.si400a.pre.analisador.textos;
 public class main {
 
     public static void main(String[] args) {
-        Controller inicio = new Controller();
-        inicio.go();
+        try {
+            Controller inicio = new Controller();
+            inicio.go();
+        } catch (Exception e) {
+            System.out.println("Falha Catastrófica");
+        }
     }
 }

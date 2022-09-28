@@ -30,6 +30,7 @@ public class Controller {
      */
     public void go() {
         Scanner scan = new Scanner(System.in);
+        System.out.printf("Escreva o nome dos textos separados por espaço: ");
         String line = scan.nextLine();
         String[] args = line.split(" ");
         for (String txt : args) {
