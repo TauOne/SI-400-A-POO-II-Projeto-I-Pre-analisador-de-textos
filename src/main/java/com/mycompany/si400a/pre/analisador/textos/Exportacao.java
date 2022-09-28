@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * Classe para criação o arquivo .csv
  *
- * @author
+ * @author Gabriel Marino 247455
  */
 public class Exportacao {
 
@@ -28,7 +28,7 @@ public class Exportacao {
      * de destino<br>
      * @param arg Recebe o nome do arquivo no formato .txt a ser convertido em
      * .csv.
-     * @author
+     * @author Gabriel Marino 247455
      */
     public static void escrever(Map<String, String> map, String arg) {
         arg = arg.replace(".txt", "");
