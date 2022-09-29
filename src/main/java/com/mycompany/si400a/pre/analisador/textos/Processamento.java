@@ -147,7 +147,6 @@ public class Processamento {
         
         for (String key : aux) {
             this.map.put(key, "");
-            cont++;
         }
         cont = 1;
         //garante que não vai extrapolar o tamanho do vetor
