@@ -141,19 +141,37 @@ public class Processamento {
      * @author Rodrigo Marabesi Machado 187908
      */
     public void mapear() {
+        
         String[] aux = this.texto.split(" ");
         int cont = 0;
+        System.out.println(aux[0]);
+        System.out.println(aux[aux.length-1]);
+        boolean stringRepetida;
 
         //cria um mapeamento somente com as chaves
-        for (String key : aux) {
-            this.map.put(key, "");
+        for (String string : aux) {
+            
         }
-
+        for (String key : aux) {
+            //verifica se existe mais de uma ocorrência de uma mesma palavra
+                if(!(key == aux[aux.length-1])){
+                    this.map.put(key, "");
+                }
+                cont++;
+        }
+        cont = 1;
         //garante que não vai extrapolar o tamanho do vetor
         while (cont < aux.length - 1) {
             //verifica se o valor já não existe naquele mapa
             if (!map.get(aux[cont]).contains(aux[cont + 1])) {
-                this.map.put(aux[cont], this.map.get(aux[cont]) + ", " + aux[cont + 1]);
+                    this.map.put(aux[cont], this.map.get(aux[cont]) + ", " + aux[cont + 1]);
+            }
+            cont++;
+        }
+        //removendo chaves nula
+        while (cont < aux.length - 1) {
+            if(this.map.get(aux[cont]) == ""){
+                this.map.remove(aux[cont]);
             }
             cont++;
         }

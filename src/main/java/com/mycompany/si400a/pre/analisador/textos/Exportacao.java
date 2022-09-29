@@ -38,7 +38,7 @@ public class Exportacao {
             try ( PrintWriter gravarArq = new PrintWriter(arq)) {
                 arg = "";
                 for (String key : map.keySet()) {
-                    arg += key + map.get(key) + "\n";
+                    arg += (key + map.get(key) + "\n");
                 }
                 gravarArq.println(arg);
             }
