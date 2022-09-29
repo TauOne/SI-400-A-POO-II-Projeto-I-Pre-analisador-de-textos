@@ -146,11 +146,8 @@ public class Processamento {
         int cont = 0;
         
         for (String key : aux) {
-            //verifica se existe mais de uma ocorrência de uma mesma palavra
-                if(!(key == aux[aux.length-1])){
-                    this.map.put(key, "");
-                }
-                cont++;
+            this.map.put(key, "");
+            cont++;
         }
         cont = 1;
         //garante que não vai extrapolar o tamanho do vetor
@@ -162,7 +159,7 @@ public class Processamento {
             cont++;
         }
         //removendo chaves nula
-        while (cont < aux.length - 1) {
+        while (cont < aux.length) {
             if(this.map.get(aux[cont]) == ""){
                 this.map.remove(aux[cont]);
             }
