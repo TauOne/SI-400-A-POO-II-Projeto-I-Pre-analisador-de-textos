@@ -144,10 +144,7 @@ public class Processamento {
         
         String[] aux = this.texto.split(" ");
         int cont = 0;
-        System.out.println(aux[0]);
-        System.out.println(aux[aux.length-1]);
-        boolean stringRepetida;
-
+        
         //cria um mapeamento somente com as chaves
         for (String string : aux) {
             
