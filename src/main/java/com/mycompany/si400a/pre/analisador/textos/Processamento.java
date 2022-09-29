@@ -138,7 +138,7 @@ public class Processamento {
      * map desse objeto<br>
      * <b>Uso:</b>
      * ObjetoProcessamento.mapear();
-     * @author
+     * @author Rodrigo Marabesi Machado 187908
      */
     public void mapear() {
         String[] aux = this.texto.split(" ");

@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 /**
  *Classe que carrega toda a lógica do programa.
- * @author 
+ * @author Wara Inti Pardo 218904
  */
 public class Controller {
     /**
@@ -26,7 +26,7 @@ public class Controller {
      *  Tornar todos os carcteres minúsculos<br>
      *  Mapear o texto<br>
      *  Criar o arquivo .csv<br>
-     *  @author 
+     *  @author Wara Inti Pardo 218904
      */
     public void go() {
         Scanner scan = new Scanner(System.in);

@@ -10,7 +10,7 @@ package com.mycompany.si400a.pre.analisador.textos;
 
 /**
  *
- * @author
+ * @author Rodrigo Marabesi Machado 187908
  */
 public class main {
 
