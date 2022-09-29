@@ -25,7 +25,7 @@ public class Processamento {
      * Objeto.getTexto();<br>
      * @return um objeto do tipo String <br>
      * contendo o valor do atributo texto.
-     * @author Matheus Roberto Mariano 246029
+     * @author Rodrigo Marabesi Machado 187908
      */
     public String getTexto() {
         return texto;
@@ -36,7 +36,7 @@ public class Processamento {
      * Objeto.setTexto(String texto);<br>
      * @param texto é um Objeto do tipo String<br>
      * que sobrescreve o conteúdo do atributo texto.
-     * @author Matheus Roberto Mariano 246029
+     * @author Rodrigo Marabesi Machado 187908
      */
     public void setTexto(String texto) {
         this.texto = texto;
@@ -47,7 +47,7 @@ public class Processamento {
      * Objeto.getMap();<br>
      * @return um objeto do tipo TreeMap<br>
      * contendo o valor do atributo map.
-     * @author Matheus Roberto Mariano 246029
+     * @author Rodrigo Marabesi Machado 187908
      */
     public Map<String, String> getMap() {
         return map;
@@ -98,7 +98,7 @@ public class Processamento {
      * ObjetoProcessamento.removerPont(String splitter); <br>
      * @param splitter deve ser um Objeto do tipo String <br> 
      * contendo a pontuação a ser removido do texto. <br>
-     * @author Matheus Roberto Mariano 246029
+     * @author Rodrigo Marabesi Machado 187908
      */
     public void removerPont(String splitter) {
         if (this.texto.contains(splitter)) {
@@ -111,7 +111,7 @@ public class Processamento {
      * <b>Uso:</b>
      * ObjetoProcessamento.removerPont();
      * Use sempre esse método após todos os outros removerPont(String splitter).
-     * @author Matheus Roberto Mariano 246029
+     * @author Rodrigo Marabesi Machado 187908
      */
     public void removerPont() {
         if (getTexto().contains("  ") || getTexto().contains("   ")) {
@@ -124,7 +124,7 @@ public class Processamento {
      * do texto em letras minúsculas<br>
      * <b>Uso:</b>
      * ObjetoProcessamento.lowerCase();
-     * @author Matheus Roberto Mariano 246029
+     * @author Rodrigo Marabesi Machado 187908
      */
     public void lowerCase() {
         setTexto(this.texto.toLowerCase());
@@ -138,7 +138,7 @@ public class Processamento {
      * map desse objeto<br>
      * <b>Uso:</b>
      * ObjetoProcessamento.mapear();
-     * @author Rodrigo Marabesi Machado 187908
+     * @author Matheus Roberto Mariano 246029
      */
     public void mapear() {
         
