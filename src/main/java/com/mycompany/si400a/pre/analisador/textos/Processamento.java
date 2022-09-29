@@ -145,10 +145,6 @@ public class Processamento {
         String[] aux = this.texto.split(" ");
         int cont = 0;
         
-        //cria um mapeamento somente com as chaves
-        for (String string : aux) {
-            
-        }
         for (String key : aux) {
             //verifica se existe mais de uma ocorrência de uma mesma palavra
                 if(!(key == aux[aux.length-1])){
