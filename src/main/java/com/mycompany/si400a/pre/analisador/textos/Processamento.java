@@ -17,7 +17,7 @@ import java.util.TreeMap;
  * @author 
  */
 public class Processamento {
-    private String texto;
+    private String texto = "";
     private TreeMap<String, String> map = new TreeMap();
     /**
      * Método acessor publico do atributo texto.<br>
