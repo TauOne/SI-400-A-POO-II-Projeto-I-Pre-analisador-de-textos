@@ -14,7 +14,7 @@ import java.util.TreeMap;
 /**
  * Classe para trabalhar em cima <br>
  * do texto e mapea-lo.
- * @author 
+ * @author Rodrigo Marabesi Machado 187908
  */
 public class Processamento {
     private String texto = "";
